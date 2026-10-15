@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whatserved"
+version = "0.1.0"
+description = "What is actually served on this machine's inference ports? Maps port -> process -> engine -> loaded model. Read-only, stdlib-only."
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+whatserved = "whatserved:main"
+
+[tool.setuptools]
+py-modules = ["whatserved"]
