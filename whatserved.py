@@ -268,7 +268,7 @@ def main(argv=None) -> int:
         ports = sorted(set(listen) | set(COMMON_PORTS))
     else:
         ports = sorted(p for p in COMMON_PORTS if p in listen)
-        if not ports:
+        if not ports and not args.as_json:
             print("no usual inference port is listening; "
                   "use --all to probe every open port")
             return 0
